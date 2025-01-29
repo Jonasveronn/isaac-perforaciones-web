@@ -28,7 +28,7 @@ function About() {
   ]
 
   return (
-    <section id="quienes-somos" className="px-6 lg:px-20 py-12">
+    <section id="quienes-somos" className="px-6 lg:px-20 py-8">
       <h2 className="text-3xl font-semibold text-center mb-12">
         ¿Quiénes Somos?
       </h2>
