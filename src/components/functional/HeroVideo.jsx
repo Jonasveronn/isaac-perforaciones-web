@@ -18,10 +18,10 @@ function HeroVideo() {
 
       {/* Texto superpuesto */}
       <div className="relative z-10 flex flex-col items-start justify-center h-full text-start     text-white px-4">
-        <p className="text-2xl md:text-6xl font-bold mb-4">
+        <p className="text-4xl md:text-6xl font-bold mb-4">
           ISAAC PERFORACIONES
         </p>
-        <h1 className="text-xs md:text-2xl max-w-2xl">
+        <h1 className="text-lg md:text-2xl max-w-2xl">
           Expertos en perforaciones de agua y energía solar: Soluciones
           personalizadas en el Nordeste.
         </h1>

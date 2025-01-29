@@ -1,9 +1,24 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import burguer from "../../assets/menu-burguer.svg"
+import { motion } from "framer-motion"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  // Animaciones para el menú
+  const menuVariants = {
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 250, damping: 30 },
+    },
+    closed: {
+      opacity: 0,
+      x: "100%",
+      transition: { type: "spring", stiffness: 250, damping: 30 },
+    },
+  }
 
   return (
     <header className="top-0 left-0 w-full h-[10vh] flex justify-between items-center px-4 z-10 bg-gradient-to-b from-[#00294a] to-slate-900">
@@ -23,7 +38,7 @@ function Header() {
         <Link to="/services" className="text-white">
           Servicios
         </Link>
-        <Link to="contact" className="text-white">
+        <Link to="/contact" className="text-white">
           Contacto
         </Link>
       </div>
@@ -37,42 +52,42 @@ function Header() {
         onClick={() => setMenuOpen(!menuOpen)}
       />
 
-      {/* Menú móvil */}
-      {menuOpen && (
-        <div
-          className="z-50 absolute top-[10vh] right-0 w-full bg-slate-900 flex flex-col items-center gap-4 py-4 md:hidden 
-            transform translate-y-0 transition-transform duration-500 ease-in-out"
+      {/* Menú móvil animado */}
+      <motion.div
+        className="z-50 absolute top-[10vh] right-0 w-full bg-gradient-to-b from-[#00294a] to-slate-900 flex flex-col items-center gap-4 py-4 md:hidden"
+        initial="closed"
+        animate={menuOpen ? "open" : "closed"}
+        variants={menuVariants}
+      >
+        <Link
+          to="/"
+          className="text-white text-2xl py-2 px-4 hover:bg-slate-700 transition-all"
+          onClick={() => setMenuOpen(false)}
         >
-          <Link
-            to="/"
-            className="text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            Inicio
-          </Link>
-          <Link
-            to="/about"
-            className="text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            ¿Quienes somos?
-          </Link>
-          <Link
-            to="/services"
-            className="text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            Servicios
-          </Link>
-          <Link
-            to="contact"
-            className="text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            Contacto
-          </Link>
-        </div>
-      )}
+          Inicio
+        </Link>
+        <Link
+          to="/about"
+          className="text-white text-2xl py-2 px-4 hover:bg-slate-700 transition-all"
+          onClick={() => setMenuOpen(false)}
+        >
+          ¿Quienes somos?
+        </Link>
+        <Link
+          to="/services"
+          className="text-white text-2xl py-2 px-4 hover:bg-slate-700 transition-all"
+          onClick={() => setMenuOpen(false)}
+        >
+          Servicios
+        </Link>
+        <Link
+          to="/contact"
+          className="text-white text-2xl py-2 px-4 hover:bg-slate-700 transition-all"
+          onClick={() => setMenuOpen(false)}
+        >
+          Contacto
+        </Link>
+      </motion.div>
     </header>
   )
 }
