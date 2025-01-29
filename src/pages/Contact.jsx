@@ -17,7 +17,6 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // Validaciones básicas
     if (!formData.name || !formData.email || !formData.message) {
       setStatus({
         type: "error",
@@ -26,7 +25,6 @@ function Contact() {
       return
     }
 
-    // Aquí puedes integrar un backend o servicio como EmailJS para enviar los datos
     console.log("Datos enviados:", formData)
 
     setStatus({
@@ -35,7 +33,6 @@ function Contact() {
         "Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.",
     })
 
-    // Limpiar formulario después de enviar
     setFormData({ name: "", email: "", phone: "", message: "" })
   }
 

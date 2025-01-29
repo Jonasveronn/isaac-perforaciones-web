@@ -22,12 +22,10 @@ function Header() {
 
   return (
     <header className="top-0 left-0 w-full h-[10vh] flex justify-between items-center px-4 z-10 bg-gradient-to-b from-[#00294a] to-slate-900">
-      {/* Logo */}
       <div>
         <h1 className="text-white">ISAAC PERFORACIONES S.L.</h1>
       </div>
 
-      {/* Menú normal */}
       <div className="hidden md:flex gap-8 p-4">
         <Link to="/" className="text-white">
           Inicio
@@ -43,7 +41,6 @@ function Header() {
         </Link>
       </div>
 
-      {/* Menú hamburguesa */}
       <img
         src={burguer}
         alt="menu"
@@ -52,7 +49,6 @@ function Header() {
         onClick={() => setMenuOpen(!menuOpen)}
       />
 
-      {/* Menú móvil animado */}
       <motion.div
         className="z-50 absolute top-[10vh] right-0 w-full bg-gradient-to-b from-[#00294a] to-slate-900 flex flex-col items-center gap-4 py-4 md:hidden"
         initial="closed"
