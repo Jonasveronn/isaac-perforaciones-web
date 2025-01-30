@@ -5,12 +5,12 @@ function FAQ() {
     {
       question: "¿Qué servicios ofrece PERFORACIONES ISAAC?",
       answer:
-        "Ofrecemos servicios de perforaciones horizontales y verticales, estudios geotécnicos, instalación de pozos, entre otros.",
+        "Ofrecemos servicios de perforaciones horizontales y verticales, estudios geotécnicos, instalación de pozos, instalación de placas solares, entre otros.",
     },
     {
       question: "¿En qué zonas trabajan?",
       answer:
-        "Prestamos servicios en toda Argentina. Contáctanos para consultar disponibilidad en tu área.",
+        "Prestamos servicios en todo el nordeste argentino. Contáctanos para consultar disponibilidad en tu área.",
     },
     {
       question: "¿Cómo puedo solicitar un presupuesto?",

@@ -19,7 +19,7 @@ function Footer() {
           <div className="flex items-center gap-2 mb-2">
             <img src={phoneIcon} alt="Phone" className="w-6 h-6" />
             <a href="https://wa.me/123456789" className="hover:underline">
-              +34 123 456 789
+              +54 123 456 789
             </a>
           </div>
           <div className="flex items-center gap-2 mb-2">
@@ -30,7 +30,7 @@ function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <img src={locationIcon} alt="Ubicación" className="w-6 h-6" />
-            <span>Calle Falsa 123, Madrid, España</span>
+            <span>Calle Falsa 123, Resistencia-Chaco, Argentina</span>
           </div>
         </div>
 

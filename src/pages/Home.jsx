@@ -1,6 +1,7 @@
 import React from "react"
 import HeroVideo from "../components/functional/HeroVideo"
 import Services from "../pages/Services"
+import WhyChooseUs from "./whyChooseUs"
 import foto1 from "../assets/foto1.webp"
 
 function Home() {
@@ -39,6 +40,7 @@ function Home() {
           </p>
         </div>
       </div>
+      <WhyChooseUs />
       <Services />
     </>
   )

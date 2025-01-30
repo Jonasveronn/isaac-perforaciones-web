@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import burguer from "../../assets/menu-burguer.svg"
 import { motion } from "framer-motion"
+import logo from "../../assets/logo-blanco-sin-fondo.png"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -21,9 +22,11 @@ function Header() {
   }
 
   return (
-    <header className="top-0 left-0 w-full h-[10vh] flex justify-between items-center px-4 z-10 bg-gradient-to-b from-[#00294a] to-slate-900">
+    <header className="top-0 left-0 w-full h-[18vh] flex justify-between items-center px-4 z-10 bg-gradient-to-b from-[#00294a] to-slate-900">
       <div>
-        <h1 className="text-white">ISAAC PERFORACIONES S.L.</h1>
+        <Link to="/">
+          <img src={logo} alt="logo" className="w-72 h-72" />
+        </Link>
       </div>
 
       <div className="hidden md:flex gap-8 p-4">
@@ -50,7 +53,7 @@ function Header() {
       />
 
       <motion.div
-        className="z-50 absolute top-[10vh] right-0 w-full bg-gradient-to-b from-[#00294a] to-slate-900 flex flex-col items-center gap-4 py-4 md:hidden"
+        className="z-50 absolute top-[18vh] right-0 w-full bg-gradient-to-b from-[#00294a] to-slate-900 flex flex-col items-center gap-10 py-4 md:hidden"
         initial="closed"
         animate={menuOpen ? "open" : "closed"}
         variants={menuVariants}
